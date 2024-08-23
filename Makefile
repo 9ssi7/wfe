@@ -1,0 +1,6 @@
+test:
+	go test -v ./...
+
+test-cover:
+	go test ./... -coverprofile=./tmp/cover.out -covermode=atomic -coverpkg=./...
+	go tool cover -html ./tmp/cover.out -o ./tmp/cover.html
